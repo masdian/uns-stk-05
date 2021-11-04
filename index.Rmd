@@ -330,9 +330,9 @@ $X=$ banyaknya pulpen baik yang terambil<br> $X=\{0,1,2\}$
 
 | $X$ | $P(X)$ |
 |:-:  | :-:    |
-| 0   | $P(X=0)=P(BB)=\dfrac{{2 \choose 2} {8 \choose 0}}{10 \choose 2}=\dfrac{1}{45}$ |
-| 1   | $P(X=1)=P(BG)=\dfrac{{2 \choose 1} {8 \choose 1}}{10 \choose 2}=\dfrac{16}{45}$ |
-| 2   | $P(X=2)=P(GG)=\dfrac{{2 \choose 0} {8 \choose 2}}{10 \choose 2}=\dfrac{28}{45}$ |
+| 0   | $P(X=0)=P(BB)=\dfrac{C_2^2 C_0^8}{C_{2}^{10}}=\dfrac{1}{45}$ |
+| 1   | $P(X=1)=P(BG)=\dfrac{C_1^2 C_1^8}{C_{2}^{10}}=\dfrac{16}{45}$ |
+| 2   | $P(X=2)=P(GG)=\dfrac{C_0^2 C_2^8}{C_{2}^{10}}=\dfrac{28}{45}$ |
 
 ]
 
