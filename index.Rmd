@@ -146,7 +146,7 @@ background-image: url("gb_03.jpg")
 
 ### Misalkan $Y=\hspace{0.2cm}$ Banyaknya muncul sisi gambar.<br>Kemungkinan dari $Y=\{0,1,2\}$
 
-### Pemetaan fungsi $X$
+### Pemetaan fungsi $Y$
 
 ![](gb_06.jpg)
 
@@ -186,7 +186,7 @@ background-image: url("gb_03.jpg")
 
 ###adalah pemusatan dari nilai peubah acak jika percobaannya dilakukan secara berulang-ulang sampai tak berhingga kali (**dalam jangka waktu yang panjang**).
 
-### $$E(X) = \left\{\begin{array}{ll} \sum\limits_{\forall{x}} xp(x) & x\mbox{ diskret} \\ \int\limits_{\forall{x}} xd(x) & x\mbox{ kontinu} \end{array}\right.$$
+### $$E(X) = \left\{\begin{array}{ll} \sum\limits_{\forall{x}} xp(x) & x\mbox{ diskret} \\ \int\limits_{\forall{x}} xf(x)d(x) & x\mbox{ kontinu} \end{array}\right.$$
 ]
 
 .pull-right[
@@ -322,17 +322,17 @@ Sebaran peluang dari peubah acak $X$
 
 .red[**Contoh 16-1**]
 
-Pada suatu perusahaan produksi pulpen, diketahui dari 10 pulpen yang diproduksi terdapat 2 pulpen tidak memenuhi standar (B) dan 8 pulpen memenuhi standar (G). Jika diambil secara acak 2 pulpen dari proses produksi, dan peubah acak $X$ menyatakan banyaknya pulpen baik yang terambil, tentukan sebaran
+Pada suatu perusahaan produksi pulpen, diketahui dari 10 pulpen yang diproduksi terdapat 2 pulpen rusak/bad (B) dan 8 pulpen bagus/good (G). Jika diambil secara acak 2 pulpen dari proses produksi, dan peubah acak $X$ menyatakan banyaknya pulpen rusak/bad yang terambil, tentukan sebaran
 peubah acak $X$
 ___
 
-$X=$ banyaknya pulpen baik yang terambil<br> $X=\{0,1,2\}$
+$X=$ banyaknya pulpen rusak/bad yang terambil<br> $X=\{0,1,2\}$
 
 | $X$ | $P(X)$ |
 |:-:  | :-:    |
-| 0   | $P(X=0)=P(BB)=\dfrac{C_2^2 C_0^8}{C_{2}^{10}}=\dfrac{1}{45}$ |
+| 0   | $P(X=0)=P(GG)=\dfrac{C_0^2 C_2^8}{C_{2}^{10}}=\dfrac{28}{45}$ |
 | 1   | $P(X=1)=P(BG)=\dfrac{C_1^2 C_1^8}{C_{2}^{10}}=\dfrac{16}{45}$ |
-| 2   | $P(X=2)=P(GG)=\dfrac{C_0^2 C_2^8}{C_{2}^{10}}=\dfrac{28}{45}$ |
+| 2   | $P(X=2)=P(BB)=\dfrac{C_2^2 C_0^8}{C_{2}^{10}}=\dfrac{1}{45}$ |
 
 ]
 
@@ -431,9 +431,9 @@ $\text{Var}(X)=p(1-p)$
 
 ### Sebaran Peluang Binomial
 
-- Terdiri atas $n$ kejadian Bernoulli yang saling bebas dengan peluang sukses di setiap percobaan adalah sama.
+- Terdiri atas $n$ kejadian **Bernoulli** yang saling bebas dengan peluang sukses di setiap percobaan adalah sama.
 - Peubah acak Binomial merupakan jumlah dari kejadian .red[**sukses**] dari $n$ percobaan, $X=0,1,2,\dots, n$.
-- Misal, $p=P(\text{sukses})$, maka fungsi peluang peubah acak $X\sim\text{Binomial}(n,p)$
+- Misal, $p=P(\text{sukses})$ pada setiap percobaan, maka fungsi peluang peubah acak $X\sim\text{Binomial}(n,p)$
 $$p(x)=P(X=x)={n \choose x}p^x(1-p)^{n-x}$$
 $E(X)=np$<br>
 $\text{Var}(X)=np(1-p)$
@@ -670,6 +670,7 @@ P(1<Z<1.75)&=P(Z<1.75)-P(Z<1) \\
 ---
 
 .pull-left[
+<br><br>
 .red[**Contoh**]
 
 Nilai ujian Matematika Kelas XI di suatu sekolah diketahui menyebar normal dengan rata-rata 56 dan ragam 9. Jika ditemui salah seorang siswa kelas XI secara acak, berapa peluang siswa yang ditemui tersebut memiliki nilai kurang dari 50.
@@ -692,7 +693,7 @@ Misalkan penggunaan kuota paket data di kalangan mahasiswa Kampus A menyebar
 normal dengan nilai tengah 10 GB per bulan dan simpangan baku 2 GB.
 - Jika di pilih satu orang mahasiswa secara acak, berapakah peluang bahwa
 mahasiswa tersebut biasanya menghabiskan lebih dari 8 GB per bulan?
-- Jika ada 1000 mahasiswa di Kampus A, berapa persen di antaranya yang
+- Jika ada 1000 mahasiswa di Kampus A, berapa mahaiswa yang
 menghabiskan kuota paket data lebih dari 8 GB per bulan?
 ___
 $X \sim \text{Normal}(10,4)$<br>
@@ -704,11 +705,11 @@ $1000P(X>8)=1000(\dots)=\dots$
 ---
 
 .pull-left[
-
+<br><br>
 .red[**Soal**]
 
 Curah hujan di kota Bogor diketahui menyebar normal dengan rata-rata tingkat
-curah hujan 25 mm dan ragam 25 mm2. Hitunglah,
+curah hujan 25 mm dan ragam 25 $mm^2$. Hitunglah,
 - Peluang curah hujan di kota Bogor kurang dari 15 mm?
 - Peluang curah hujan di kota Bogor antara 10 mm sampai 20 mm?
 - Peluang curah hujan di kota Bogor di atas 40 mm?
@@ -719,7 +720,7 @@ tersebut.
 ]
 
 .pull-right[
-
+<br><br>
 .red[**Soal**]
 
 Untuk membantu korban bencana sebuah lembaga sosial berinisiatif mengumpulkan dana dari para donatur. Jumlah sumbangan setiap donatur diketahui menyebar normal dengan rata-rata 120 ribu dan simpangan baku 80 ribu.
@@ -759,7 +760,7 @@ $P(Z>-1.38)=1-P(Z<-1.38)=0.9162$
 ---
 
 .pull-left[
-
+<br><br>
 .red[**Soal**]
 
 Ujian Matematika mengunakan pilihan berganda sebanyak 10 soal dengan 5 pilihan dan hanya 1 jawaban yang benar. Antar soal tidak saling terkait atau berhubungan. Anton yang tidak belajar akhirnya menjawab semua soal dengan menebak (acak).
