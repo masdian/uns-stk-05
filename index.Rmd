@@ -422,6 +422,51 @@ $\text{Var}(X)=p(1-p)$
 
 ---
 
+.pull.center[
+#**Sebaran Peluang Bernoulli**
+]
+
+Berikut ini adalah hasil simulasi dari data yang memiliki sebaran Bernoulli dengan peluang sukses 30% yang dilakukan 500 kali.
+
+```{r echo=FALSE}
+rbinom(500, 1, 0.3)
+```
+
+---
+
+.pull.center[
+#**Sebaran Peluang Bernoulli**
+]
+
+.pull-left[
+```{r echo=FALSE}
+x <- rbinom(500, 1, 0.3)
+#prop.table(table(x))
+y <- data.frame(prop.table(table(x)))
+y$x <- as.numeric(levels(factor(y$x)))
+barplot(y$Freq ~ y$x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Bernoulli Hasil Simulasi")
+
+```
+]
+
+.pull-right[
+
+
+```{r echo=FALSE}
+x <- 0:1
+y <- dbinom(x, 1, 0.3)
+
+barplot(y~x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Bernoulli Teoritis")
+
+
+```
+
+
+]
+
+
+
+---
 
 .pull.center[
 #**Beberapa Sebaran Peluang Diskret**
@@ -462,6 +507,49 @@ Rata-rata sukses melakukan lemparan $E(X) = np = 3p$
 ---
 
 .pull.center[
+#**Sebaran Peluang Binomial**
+]
+
+Berikut ini adalah hasil simulasi dari data yang memiliki sebaran Binomial dengan peluang sukses 30% dan $n=10$ yang dilakukan 500 kali.
+
+```{r echo=FALSE}
+rbinom(500, 10, 0.3)
+```
+
+---
+
+.pull.center[
+#**Sebaran Peluang Binomial**
+]
+
+.pull-left[
+```{r echo=FALSE}
+x <- rbinom(500, 10, 0.3)
+#prop.table(table(x))
+y <- data.frame(prop.table(table(x)))
+y$x <- as.numeric(levels(factor(y$x)))
+barplot(y$Freq ~ y$x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Binomial Hasil Simulasi")
+
+```
+]
+
+.pull-right[
+
+```{r echo=FALSE}
+x <- 0:10
+y <- dbinom(x, 10, 0.3)
+
+barplot(y~x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Binomial Teoritis")
+
+```
+
+]
+
+
+
+---
+
+.pull.center[
 #**Beberapa Sebaran Peluang Diskret**
 ]
 
@@ -470,7 +558,7 @@ Rata-rata sukses melakukan lemparan $E(X) = np = 3p$
 ### Sebaran Peluang Poisson
 
 - Peubah acak yang menyatakan banyaknya kejadian yang terjadi pada suatu interval waktu tertentu atau di suatu daerah tertentu
-- Peubah acak $X$ disebut menyebar poisson dengan parameter $\mu$ atau $X\sim\text{Poisson}(\mu)$ jika
+- Peubah acak $X$ disebut menyebar poisson dengan parameter $\lambda$ atau $X\sim\text{Poisson}(\lambda)$ jika
 $$p(x)=P(X=x)=\dfrac{\lambda^xe^{-\lambda}}{x!}$$
 $E(X)=\lambda$<br>
 $\text{Var}(X)=\lambda$
@@ -489,6 +577,48 @@ Peubah acak Poisson sering digunakan untuk menyatakan banyaknya suatu kejadian j
 
 Diketahui gempa bumi terjadi di bagian timur Indonesia dengan $\lambda=2$ per minggu. Dapatkan peluang sedikitnya terjadi 1 kali gempa bumi selama
 dua minggu berikutnya.
+
+]
+
+---
+
+.pull.center[
+#**Sebaran Peluang Poisson**
+]
+
+Berikut ini adalah hasil simulasi dari data yang memiliki sebaran Poisson dengan $\lambda=5$ yang dilakukan 500 kali.
+
+```{r echo=FALSE}
+rpois(500, lambda = 5)
+```
+
+---
+
+.pull.center[
+#**Sebaran Peluang Poisson**
+]
+
+.pull-left[
+```{r echo=FALSE}
+x <- rpois(500, lambda = 5)
+#prop.table(table(x))
+y <- data.frame(prop.table(table(x)))
+y$x <- as.numeric(levels(factor(y$x)))
+barplot(y$Freq ~ y$x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Binomial Hasil Simulasi")
+
+```
+]
+
+.pull-right[
+
+
+```{r echo=FALSE}
+x <- 0:14
+y <- dpois(x, lambda = 5)
+
+barplot(y~x, xlab = "X", ylab = "p(X=x)", main = "Sebaran Peluang Poisson Teoritis")
+
+```
 
 ]
 
